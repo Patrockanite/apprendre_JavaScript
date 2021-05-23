@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameSpaces</title>
+</head>
+<body>
+    <h1>NameSpaces</h1>
+    <p>Si l'on déclare une variable globale avec un même nom dans plusieurs bibliothèques, au fil du chargement, les variables vont s'écraser l'une après l'autre.<br>
+    Exemple dans les fichiers JS</p>
+    <h2>Palierau problème en simulant un nameSpace</h2>
+    <p>On peurt palier facilement à ce problème en créant des objets littéraux et en appeleant leurs méthodes plutôt qu'en utilisant des fonctions</p>
+    <p>Exemples dans les fichiers JS</p>
+    <h2>Immdetiatly Invoked Function Expression (IIFE) (prononcé IFI)</h2>
+    <p>On peut invoquer une fonction de manière immédiate. Exemple dans le fichier IIFE.js</p>
+    <h2>Isoler son code dans une IIFE</h2>
+    <p>On peut se créer un pseudo NameSpace en encapuslant le code de "Mon_objet" dans une fonction IIFE (voir IIFE.JS). Si l'on veut appeler des méthodes depuis la Global Scope (window) il faudra créer une propriété <em>(window.toto = Mon_objet ; </em> en passant window en argument de la fonction IIFE. Ainsi window.toto et Mon_objet pointeront au même endroit de la mémoire.</p>
+    <script src="JS/script_1.js"></script>
+    <script src="JS/script_2.js"></script>
+    <script src="JS/app.js"></script>
+    <script src="JS/IIFE.js"></script>
+</body>
+</html>
