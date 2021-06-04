@@ -9,12 +9,12 @@ function getRequestObject() {
   if (global.XMLHttpRequest) {
     return (new XMLHttpRequest());
   } 
-  else if (global.ActiveXObject) {
+  else if (global.ActiveXObject) { //Eventuellement pour d'anciens navigateur type IE
     // For very old IE browsers (optional)
     return (new ActiveXObject("Microsoft.XMLHTTP"));
   } 
   else {
-    global.alert("Ajax is not supported!");
+    global.alert("Désolé, Ajax n'est pas supporté pas votre navigateur !"); // Pour le cas assez improbable ou le navigateur ne supporterait pas Ajax
     return(null); 
   }
 }
