@@ -1,4 +1,4 @@
-// Event handling
+//Gérer les événements
 document.addEventListener("DOMContentLoaded",
   function (event) {
     
@@ -6,22 +6,17 @@ document.addEventListener("DOMContentLoaded",
     document.querySelector("button")
       .addEventListener("click", function () {
         
-        // Call server to get the name
+        // Appel au serveur pour récupérer le nom
         $ajaxUtils
-          .sendGetRequest("data/name.txt", 
+          .sendGetRequest("data/contenu.txt", 
             function (request) {
               var name = request.responseText;
 
-              document.querySelector("#content")
-                .innerHTML = "<h2>Hello " + name + "!</h2>";
+              document.querySelector("#contenu")
+                .innerHTML = "<h2>Bonjour " + name + " !</h2>";
             });
 
         
       });
   }
 );
-
-
-
-
-
