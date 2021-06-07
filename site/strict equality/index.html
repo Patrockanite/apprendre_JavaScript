@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Equality</title>
+</head>
+<body>
+    <h1>Intérêt de l'égalité stricte en Javascript</h1>
+    <p>Dans une structure conditionnelle de type if(x==y){<br>
+    <i>instruction ;</i><br>
+    }<br>
+    Javascript va retyper dynamiquement les variables s'il a besoin. Ainsi, si l'on affecte x ='4' et y = 4 de cette façon,<br>
+    il va renvoyer True alors que x est un string et y est un int. Il commence par égaliser les types puis compare les valeurs</p>
+    <p>Pour interdire ceci on va utiliser l'égalité stricte avec === </p>
+    <h3>Sans opérateur stricte (==):</h3>
+    <script>
+        var x='4', y=4 ;
+        if(x==y){
+            document.write(x+" = "+y+" JS égalise les types");
+        }
+        else{
+            document.write(x+" != "+y+" ils sont de types différents et JS n'a pas égalisé");
+        }
+    </script>
+     <h3>Avec opérateur stricte (===) :</h3>
+     <script>
+         var x='4', y=4 ;
+         if(x===y){
+             document.write(x+" = "+y+" JS égalise les types");
+         }
+         else{
+             document.write(x+" != "+y+" ils sont de types différents et JS n'a pas égalisé");
+         }
+     </script>
+    
+</body>
+</html>

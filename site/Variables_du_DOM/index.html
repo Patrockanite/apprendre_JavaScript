@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Variables dans Dom</title>
+</head>
+<body>
+    <h1 id="title">Quel type de Passage : </h1>
+    <p>dire Bonjour
+        <input id="nom" type="text">
+        <button onclick="sayBonjour();">Dis-le</button>
+    </p>
+    <div id="content"></div>
+    <h2>Attention la variable title !</h2>
+    <p>Attention à la variable title définie dans le script JS ! Comme c'est une variable primitive et non un objet, elle est une copie de la valeur et n'a donc aucune influance sur la valeur initiale de title.textContent (h1).<br>Pour pallier à ce problème, il suffit de réaffecter title.textContent par la valeur de title.    </p>
+   
+</body>
+</html>

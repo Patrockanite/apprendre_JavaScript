@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+</head>
+<body>
+    <h1>Focus vu sur un formulaire</h1>
+    <p>Ces événements placés dans le code HTML ne sont pas vraiment à leur place. Ils seraient mieux dans un fichier JS. <br> 
+        C'est ce qu'on va faire dans le fichier <a href="index.html">index.html</a></p>
+    <input id="input_1" type="text" size="50" value="Cliquez ici !" onfocus="this.value = 'Appuyez maintenant sur tabulation';" onblur="this.value='Cliquez ici !';" />
+    <br/><br />
+    <a href="#" onfocus="document.getElementById('input_1').value='Vous avez maintenant le focus sur le lien, bravo !';">Lien bidon</a>
+    
+</body>
+</html>

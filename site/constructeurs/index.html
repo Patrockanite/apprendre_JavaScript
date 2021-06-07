@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <script src="js/script.js"></script>
+  </head>
+<body>
+  <h1>constructeurs</h1>
+  <h2>Mot clef New</h2>
+  <h2>Mot clef This</h2>
+  <h2>Mot clef this dans un objet littéral</h2>
+  <p><strong>Attention ! </strong>Quand on place une fonction (méthode) dans une autre fonction (méthode), le mot clef this va pointer vers l'objet Global et donc this.radius = 20 ;
+    va affecter à 20 un attribut radius appartenant à Global (Window)<br>
+  Ceci est considéré comme un bug par nombre de personnes. Il en est ainsi pour tous les moteurs JS de tous les navigateurs car c'est dans le fonctionnement propre de JS.</p>
+  <h2>Self pour palier au problème</h2>
+  <p>Pour palier au problème, on déclare une variable self = this (qui peut s'appeler toto ou foo) dans la fonction ainsi ce n'est pas le mot clef this qui est utilisé mais self ce qui pare à ce "bug"<br>
+  A priori, ce problème serait corrigé dans ECMAScript 6.</p>
+</body>
+</html>
